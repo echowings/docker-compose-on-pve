@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  mosdns:
+    container_name: mosdns_dc
+    image: irinesistiana/mosdns:latest
+    restart: always
+    volumes: 
+      - ./mosdns-data:/etc/mosdns
+    ports:
+      - 5353:53/udp
+    networks:
+      - default
+
+networks:
+  default:
+    name: dns-network
+    external: true

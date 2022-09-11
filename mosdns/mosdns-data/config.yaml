@@ -1,0 +1,90 @@
+log: 
+  level: error
+  file: "./mosdns.log"
+data_providers:
+  - tag: geosite
+    file: ./geosite.dat
+    auto_reload: true
+  - tag: geoip
+    file: ./geoip-only-cn-private.dat
+    auto_reload: true
+plugins:
+  - tag: cache
+    type: cache
+    args:
+      size: 4096
+      lazy_cache_ttl: 172800
+  - tag: forward_local
+    type: fast_forward
+    args:
+      upstream:
+        - addr: 'udp://114.114.114.114:53'
+          enable_pipeline: true
+        - addr: 'udp://223.6.6.6:53'
+          idle_timeout: 8
+          trusted: true
+  - tag: forward_remote
+    type: fast_forward
+    args:
+      upstream:
+        - addr: 'udp://208.67.220.220:53'
+          enable_pipeline: true
+        - addr: 'udp://1.0.0.1:53'
+          enable_pipeline: true
+          trusted: true
+  - tag: query_is_local_domain
+    type: query_matcher
+    args:
+      domain:
+        - 'provider:geosite:apple-cn'
+        - 'provider:geosite:cn'
+  - tag: query_is_non_local_domain
+    type: query_matcher
+    args:
+      domain:
+        - 'provider:geosite:geolocation-!cn'
+  - tag: query_is_ad_domain
+    type: query_matcher
+    args:
+      domain:
+        - 'provider:geosite:category-ads-all'
+  - tag: response_has_local_ip
+    type: response_matcher
+    args:
+      ip:
+        - 'provider:geoip:cn'
+  - tag: main_sequence
+    type: sequence
+    args:
+      exec:
+        - _no_ecs
+        - cache
+        - if: query_is_ad_domain
+          exec:
+            - _new_nxdomain_response
+            - _return
+        - if: query_is_local_domain
+          exec:
+            - forward_local
+            - _return
+        - if: query_is_non_local_domain
+          exec:
+            - forward_remote
+            - _return
+        - primary:
+            - forward_local
+            - if: '(! response_has_local_ip) && [_response_valid_answer]'
+              exec:
+                - _drop_response
+          secondary:
+            - _prefer_ipv4
+            - forward_remote
+          fast_fallback: 200
+servers:
+  - exec: main_sequence
+    listeners:
+      - protocol: udp
+        addr: '0.0.0.0:53'
+      - protocol: tcp
+        addr: '0.0.0.0:53'
+

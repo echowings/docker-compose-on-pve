@@ -1,0 +1,65 @@
+---
+verbosity: "info"
+address: 0.0.0.0:53
+script:
+  init: |
+    let geoip = new_builtin_geoip().seal();
+  route: |
+    // A few constants are predefined:
+    // - query: the incoming query received
+    // - ctx: the query context, e.g. client IP
+    // - upstreams: the upstreams API
+    if query.first_question.qtype == "AAAA" {
+      return create_blackhole(query);
+    }
+    let resp = upstreams.send("domestic", query);
+
+    for ans in resp.answer {
+    switch ans.rtype.to_string() {
+      "A" if !geoip.contains(ans.to_a().ip, "CN") => { return upstreams.send("secure", query); }
+      "AAAA" if !geoip.contains(ans.to_aaaa().ip, "CN") => { return upstreams.send("secure", query); }
+      _ => continue,
+    };
+    }
+    resp
+
+
+upstreams:
+  114DNS:
+    udp:
+      addr: 114.114.114.114:53
+
+  Ali:
+    udp:
+      addr: 223.6.6.6:53
+
+  domestic:
+    hybrid:
+      - 114DNS
+      - Ali
+  cloudflare1:
+    udp:
+      addr: 1.0.0.1:53
+
+  cloudflare2:
+    udp:
+      addr: 1.1.1.1:53
+  quad9:
+    udp:
+      addr: 9.9.9.9:53
+  googledns1:
+    udp:
+      addr: 8.8.8.8:53
+  googledns2:
+    udp:
+      addr: 8.8.4.4:53
+
+
+
+  secure:
+    hybrid:
+      - googledns1
+      - googledns2
+      - cloudflare1
+      - cloudflare2
+      - quad9

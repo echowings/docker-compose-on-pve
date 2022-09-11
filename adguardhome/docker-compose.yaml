@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  adguardhome:
+    container_name: adguardhome
+    image: adguard/adguardhome
+    ports: 
+      - 3000:3000
+      - 53:53/udp
+    volumes:
+      - ./data:/opt/adguardhome/work/data 
+      - ./conf.d:/opt/adguardhome/conf
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - default
+    restart: always
+
+
+networks:
+  default:
+    name: dns-network
+    external: true

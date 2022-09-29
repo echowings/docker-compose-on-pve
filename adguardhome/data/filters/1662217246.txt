@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
-! Version: 343.202209090946
+! Version: 344.202209261107
 ! Title: I don't care about cookies
 ! Expires: 3 days
 ! Licence: https://www.gnu.org/licenses/gpl-3.0.html
 ! Homepage: https://www.i-dont-care-about-cookies.eu/
-! Last modified: 09 Sep 2022 07:46 UTC
+! Last modified: 26 Sep 2022 09:07 UTC
 !
 !
 ! GLOBAL RULES
@@ -460,7 +460,7 @@
 ###polityka-cookie
 ###snippet-cookieControl-cookieInfo
 ###WP-cookie-info
-~kulturprojekte.berlin,~rapidonline.com,~humboldtforum.org,~gov.lv,~riga.lv,~search.itaa.be,~dehn.at,~hetwkz.nl,~umcutrecht.nl,~ticsante.com,~techopital.com,~sandro-paris.com,~feuvert.fr,~ad.win.nl,~conclude.com,~thinkproject.com,~dehn.de###cookieConsent:not(.modal)
+~kulturprojekte.berlin,~rapidonline.com,~humboldtforum.org,~berlinartweek.de,~gov.lv,~riga.lv,~search.itaa.be,~dehn.at,~hetwkz.nl,~umcutrecht.nl,~ticsante.com,~techopital.com,~sandro-paris.com,~feuvert.fr,~ad.win.nl,~conclude.com,~thinkproject.com,~dehn.de###cookieConsent:not(.modal)
 ###cookie-info-box
 ##.avs-cookie-message:not(body):not(html)
 ###header-cookie
@@ -924,7 +924,7 @@
 ##.epson_cookienotice:not(body):not(html)
 ##.cookies-info-banner:not(body):not(html)
 ###notifyCookie
-~muziker.com,~muziker.at,~muziker.be,~muziker.bg,~muziker.hr,~muziker.cz,~muziker.nu,~muziker.ee,~muziker.fi,~muziker.fr,~muziker.de,~muziker.gr,~muziker.hu,~muziker.ie,~muziker.it,~muziker.lv,~muziker.lt,~muziker.lu,~muziker.nl,~muziker.pl,~muziker.pt,~muziker.ro,~muziker.sk,~muziker.si,~muziker.es,~muziker.se,~muziker.co.uk,~lektury.gov.pl##.cookies-box:not(body):not(html)
+~pro-doma.cz,~muziker.com,~muziker.at,~muziker.be,~muziker.bg,~muziker.hr,~muziker.cz,~muziker.nu,~muziker.ee,~muziker.fi,~muziker.fr,~muziker.de,~muziker.gr,~muziker.hu,~muziker.ie,~muziker.it,~muziker.lv,~muziker.lt,~muziker.lu,~muziker.nl,~muziker.pl,~muziker.pt,~muziker.ro,~muziker.sk,~muziker.si,~muziker.es,~muziker.se,~muziker.co.uk,~lektury.gov.pl##.cookies-box:not(body):not(html)
 ###AvisoCookieslaw
 ###Generictopmenu1_ServiceMenu1_PnlCookie
 ###headerCookies
@@ -2816,7 +2816,7 @@
 ###disclaim_bar
 ##.cookiepanel:not(body):not(html)
 ~ing.it##.banner-cookie:not(body):not(html)
-~flex-tools.com##.js-cookie-bar:not(body):not(html)
+~vanmoer.com,~flex-tools.com##.js-cookie-bar:not(body):not(html)
 ###cookieAgreementBar
 ###MessageInfo_panelCookie
 ###vd-cookie-banner
@@ -7406,7 +7406,7 @@
 ##.gdprMessage:not(body):not(html)
 ##.cookies.is-visible:not(body):not(html)
 ###ccc > #ccc-notify
-~canalplus.com,~hansapark.de##div[class*="CookieBanner"]:not([class*="page"]):not(.app)
+~go-e.com,~canalplus.com,~hansapark.de##div[class*="CookieBanner"]:not([class*="page"]):not(.app)
 ##.card-cookie-notice
 ###smart-cmp-host
 ###gdprsticky
@@ -9279,7 +9279,7 @@
 ##.js-cookies-alert:not(body):not(html)
 ##iframe[src*="herowelcomebar.appspot.com"]
 ##.tracking-box-wrap[style*="block"]
-~telenor.no,~online.no###__tealiumGDPRcpPrefs
+##.xxxlutzkarrierecenter-boxCookieActive
 ##.cookiepopin:not(body):not(html)
 ###fbar > .fbar > div[jsl] #cnsh
 ###fbar > .fbar > #cnsi ~ div > #cnsh
@@ -9311,7 +9311,7 @@
 ##cookies-message-display
 ###cookiespop
 ##.anunt.cookies:not(body):not(html)
-~wentronic.pl,~wentronic.com,~schuurman-schoenen.nl##.js-cookie-modal:not(body):not(html)
+~vanmoer.com,~wentronic.pl,~wentronic.com,~schuurman-schoenen.nl##.js-cookie-modal:not(body):not(html)
 ###useCookieNotice
 ##body > .container-fluid.cookie
 ##.ui-dialog[aria-describedby*="cookie-confirm"]
@@ -10005,7 +10005,7 @@
 ###global-nav-header div[aria-labelledby*="cookie-banner"]
 ##.cookie_consent_overlay
 ###kecookiehint
-##.cookie-disclaimer--default.is-visible
+##.cookie-disclaimer--default
 ##.s-cookie-popup:not(body):not(html)
 ###snippet--cookieSettings
 ##.fa-cookie.active[data-fa-cookie-inited]
@@ -10726,7 +10726,7 @@
 ###banner-cookie-banner
 ##.cookieBar__container
 ##.common-header-js .common-header-gdpr
-###__nuxt .legal-consent-wrap
+###above-header .legal-consent
 ##.l-container.c-cookie__container
 ~deichmann.com,~vanharen.nl,~dosenbach.ch##.cookie-consent__wrapper
 ##.module-cookies.cookie-bar--is-visible
@@ -11041,7 +11041,7 @@
 ###gdpr--cookie-policy-root
 ###cookii-overlay
 ###cookieswrapper > #cookiesinner
-###root div[class*="CookiePopup"]
+~dailymotion.com###root div[class*="CookiePopup"]:not([role="dialog"])
 ##.gdpr.js-gdpr[style*="block"]
 ##.cookie-msg-footer
 ###footer ~ div[class*="gpdr-banner"]
@@ -11192,7 +11192,7 @@
 ##body > .cb_bar.cb_active
 ###area-PrivacyNotice
 ###eagerly-tools-cookie-btn
-###eagerly-tools-cookie-btn ~ div[id*="cookie"]
+~paard.nl###eagerly-tools-cookie-btn ~ div[id*="cookie"]
 ###datenschutzfenster
 ##.h-modal-cookie
 ###alpenite-cookienotice-overlay
@@ -11410,7 +11410,7 @@
 ##.accept-box--rodo
 ##.sg_cookieaccept
 ##.gdpr_disclaimer
-###sdgdpr_modal_wrapper
+###ppms_cm_bar_overlay[class*="cm"]
 ##notification-block[data-notice*="cookie-disclosure"]
 ~statik.be###cookiebanner-overlay
 ##.cookiesUseAgree
@@ -11428,7 +11428,7 @@
 ###dap-cookie-bar
 ###cookieGDPR
 ##.dv-cookie-banner
-###__next [data-testid*="cookie-banner"]
+~go-e.com###__next [data-testid*="cookie-banner"]
 ###cookieconsent-settings-popup
 ###privacy-policy-prompt
 ##.blockCookieNotice
@@ -12169,7 +12169,7 @@
 ##.cookie-policy-opt-out
 ##.bn-cookie-panel
 ###mod-eprivacyoptin
-###jentis_consent
+##website-cookie-consent-banner
 ###cookiesck_overlay
 ##.cookie_notification_container
 ###cookiesOverlay
@@ -12750,7 +12750,7 @@
 ##.cookiepanel_overlay
 ##.top_nav ~ .cookie_tag
 ###notify.cookie
-~mein-lehrbetrieb.at###cookie-settings-wrapper
+~waidhofen.at,~mein-lehrbetrieb.at###cookie-settings-wrapper
 ##.cookies-banner__overlay
 ###mp-misc-cookie-bar
 ###consent-mgmt-banner
@@ -13589,8 +13589,9 @@
 ###sc-cookie-banner
 ###keksGenehmigungsModal
 ###keksGenehmigungsModal ~ .modal-backdrop
-##.szn-cmp-dialog-container
 ###wpca-popup-modal
+##.cookie-info-more-options-background
+###cookie-info-more-options-layer
 !
 ! CUSTOM RULES
 !
@@ -15994,7 +15995,6 @@ themaven.net##.consent-ui
 coop.se##.js-personalInformationNotice
 broadcom.com##.ribbon-wrapper
 technischeunie.nl###footer-slideup-highlight-banner
-brain.fm##div[class*="modules-core-css-CookiePopup"]
 cryptokitties.co##.BottomBanner
 telia.ee##iframe.login_top, .header__notice
 giphy.com##div[class*="flash-message__MessageWrapper"]
@@ -17633,7 +17633,6 @@ depo.lv##.depo-cookies
 2ask.de###cadvise_bar
 story.tl##div[class*="CookieConsent"]
 rohan.co.uk###ccpop
-assura.ch###__next > div > div[width]
 gog.com##body > div[data-editable="boxCookieNotification"]
 lisa.ru##.disclamer
 a2s.pl##.cookieForm
@@ -18313,7 +18312,6 @@ getdigital.de##.privacy-wrapper
 pdfescape.com###pdfe_cmp
 cgtn.com##.cg-tools-dialog
 schwab.de##.cj-privacy-settings
-mall.tv##.privacy-wrapper.flex-wrap
 shop.hfo.pl###cookie
 mclaren.com##.messages.show
 scad.edu##.consent-footer
@@ -18386,7 +18384,6 @@ legalstart.fr###pop
 halfmooninn.com###hebs-consent
 hammarinsahko.fi###cookie-conset-bar
 iplogger.org###message, .message
-wannonce.com##.jconfirm
 speisebaron.de##.navbar.fixed-bottom
 boyden.ca###site-terms
 bgee.org###bgee_privacy_banner
@@ -20510,7 +20507,6 @@ xalingo.com.br###wrng-agrmnt
 burg-lindenfels.de###cookie
 numuki.com###consent
 metradar.ch###closeonaction
-eib.org###eib-popup-policy
 purexbox.com##.dgp-consent
 taste-of-koroni.de###consent
 etowine.com###cookie
@@ -21886,7 +21882,6 @@ gns3.com###oio-container > div + div + div ~ div:last-child
 haerke.de###seite > div[style*="absolute"]
 riserapp.com##.Cookie
 webmdhealthservices.com##.cookiePolicyModal
-dailymotion.com###consent-group
 workspace.google.com##main > div:last-child:not(only-child)
 business.google.com###CookieDialog
 santatracker.google.com##santa-notice
@@ -22458,7 +22453,6 @@ digimobil.es###infocookies2, .modal-backdrop, .modal-cookies-warning, .modal-ove
 journalisten.no##.adn-window, .adn-editButton
 ddos-guard.net##.cookie
 mince.nl###sbeu-cookie
-mimovrste.com##.legal-consent
 filescan.io##.cookie
 only.com##.overlay-backdrop
 vitalsource.com##.dismiss-cookie, div[aria-describedby*="CookieBanner"], .App > footer + div[role="dialog"]
@@ -22482,6 +22476,31 @@ rambox.app##footer ~ .fixed
 regielive.ro###cc-mesaj-box-wrapper
 thegoodocs.com##.cookie__form
 lordicon.com###cookies
+eib.org###eib-popup-policy, .cookies-home_overlay
+assura.ch###__next > div[class] > div[display]
+filen.io###cookie-consent
+capcut.com##.lv_cookie_banner-wrapper
+hyundai.com##.mainTopBanner
+hyundai.com.br##.footertextbox
+dailymotion.com###consent-group
+bilibili.tv##.bstar-cookie-info
+truthsocial.com###soapbox > [data-testid="banner"]
+arlettie.com###___smooth > div > .sui-grid
+fandor.com##.alert-warning
+nordvpn.com##.CookieConsentV2
+xxxlutz.at###root > footer ~ div
+xxxlutz.de###root > footer ~ div
+xxxlutz.ch###root > footer ~ div
+moemax.at###root > footer ~ div
+moemax.hu###root > footer ~ div
+moemax.de###root > footer ~ div
+moebelix.cz###root > footer ~ div
+moreysa.com###sdgdpr_modal_wrapper
+youngcourtesans.com##.cookie-request
+dirtyflix.com##.cookie-request
+riscocloud.com##rc-cookies-alert
+kontorsmaterial.se##body > div[id^="cbck"]
+braze.com##.opt-in--background
 !
 ! SCRIPT BLOCKING
 !
@@ -22989,6 +23008,7 @@ cc.controlcookies.com
 /polityka-prywatnosci/js/cookie-overlay
 /cookie-consent-portlet/*
 /wp-content/plugins/simple-gdpr-cookie-compliance/*
+/cookies-consents.js
 ||tmgonlinemedia.nl/consent/script/consent.js$script
 ||privacy.ariadneathome.nl/script/consent.js$script
 ||privacy.vtwonen.nl/script/consent.js$script
@@ -23066,7 +23086,7 @@ analytics-consent-manager.azureedge.net
 /tm-gdpr-consent/*
 ||snigelweb.com/adconsent$script
 ||sncmp.com/adconsent$script
-||consentmanager.net/delivery/js/cmp$script,domain=~winfuture.de
+||consentmanager.net/delivery/js/cmp$script,domain=~winfuture.de|~infranken.de
 consent-manager.confirmic.com
 ||consentbanner.de/public/app.js$script
 ||classistatic.de/consent-statics$script
@@ -23079,7 +23099,7 @@ consent-manager.confirmic.com
 /epaas.consentdrawer.bundle
 /consentbanner-fragment/*
 ||altravia.com/connector/consent_mode.js$script
-||consentmanager.net/delivery/cmp$script,domain=~winfuture.de
+||consentmanager.net/delivery/cmp$script,domain=~winfuture.de|~infranken.de
 /taunton-user-consent.js
 /fileadmin/templates/js/cconsent.js
 /wp-content/plugins/okf-euconsent
@@ -23190,7 +23210,7 @@ jssdk.privacy.pre.schibsted.com
 ||tagcommander.com/privacy$script,domain=~labanquepostale.fr
 ||isgprivacy.cbsi.com/dist/optanon$script,domain=~cbsnews.com|~startrek.com|~insideedition.com|~cbslocal.com|~etonline.com
 /contao-privacy-center.js
-privacy-mgmt.com$domain=~standard.co.uk|~theguardian.com|~theguardian.com.|~bild.de|~computerbild.de|~bold.dk|~welt.de|~t-online.de|~focus.de|~chip.de|~faz.net|~n-tv.de|~spiegel.de|~privacy-mgmt.com|~wunderweib.de|~helpster.de|~tvmovie.de|~praxisvita.de|~cosmopolitan.de|~giga.de|~ostsee-zeitung.de|~sky.com|~lvz.de|~mein-schoener-garten.de|~boerse-online.de|~tvspielfilm.de|~autobild.de|~bike-bild.de|~bz-berlin.de|~cyberport.at|~cyberport.de|~golem.de|~express.de|~tv8.it|~volkskrant.nl|~rtl2.de|~si.com|~derstandard.de|~derstandard.at|~unsere-helden.com|~rtl.de|~stern.de|~freenet-funk.de|~maennersache.de|~heise.de|~t3n.de|~11freunde.de|~finanzen.at|~finanzen.net|~insider.com|~transfermarkt.at|~transfermarkt.ch|~transfermarkt.co.uk|~transfermarkt.com|~transfermarkt.com.tr|~transfermarkt.de|~transfermarkt.fr|~transfermarkt.it|~transfermarkt.nl|~transfermarkt.pl|~transfermarkt.pt|~transfermarkt.us|~vip.de|~businessinsider.de|~clever-tanken.de|~fitbook.de|~meinestadt.de|~metal-hammer.de|~musikexpress.de|~myhomebook.de|~noizz.de|~politico.eu|~rollingstone.de|~stylebook.de|~techbook.de|~testbild.de|~wieistmeineip.at|~wieistmeineip.de|~wieistmeineip.ch
+privacy-mgmt.com$domain=~standard.co.uk|~theguardian.com|~theguardian.com.|~bild.de|~computerbild.de|~bold.dk|~welt.de|~t-online.de|~focus.de|~chip.de|~faz.net|~n-tv.de|~spiegel.de|~privacy-mgmt.com|~wunderweib.de|~helpster.de|~tvmovie.de|~praxisvita.de|~cosmopolitan.de|~giga.de|~ostsee-zeitung.de|~sky.com|~lvz.de|~mein-schoener-garten.de|~boerse-online.de|~tvspielfilm.de|~autobild.de|~bike-bild.de|~bz-berlin.de|~cyberport.at|~cyberport.de|~golem.de|~express.de|~tv8.it|~epaper.volksstimme.de|~volkskrant.nl|~rtl2.de|~si.com|~derstandard.de|~derstandard.at|~unsere-helden.com|~rtl.de|~stern.de|~freenet-funk.de|~maennersache.de|~heise.de|~t3n.de|~11freunde.de|~finanzen.at|~finanzen.net|~insider.com|~transfermarkt.at|~transfermarkt.ch|~transfermarkt.co.uk|~transfermarkt.com|~transfermarkt.com.tr|~transfermarkt.de|~transfermarkt.fr|~transfermarkt.it|~transfermarkt.nl|~transfermarkt.pl|~transfermarkt.pt|~transfermarkt.us|~vip.de|~businessinsider.de|~clever-tanken.de|~fitbook.de|~meinestadt.de|~metal-hammer.de|~musikexpress.de|~myhomebook.de|~noizz.de|~politico.eu|~rollingstone.de|~stylebook.de|~techbook.de|~testbild.de|~wieistmeineip.at|~wieistmeineip.de|~wieistmeineip.ch
 privacy-policy.u-lab.nl
 ||trustcommander.net/privacy$script,domain=~tf1info.fr|~tf1.fr
 app.eprivacy-keeper.eu
@@ -23237,6 +23257,7 @@ cmp.cls.pm
 /truendo_cmp.pid.js
 cmp.optad360.io
 ||snigelweb.com/sncmp$script
+||seznam.cz/js/cmp$script
 /pubtech-cmp
 cmp.pafo.fairbung.com
 ||sibbo.net/v2/sibbo-cmp$script
@@ -23449,6 +23470,7 @@ wpjslib-chunk-notification.js^
 /wecoma-lite.js
 ||resourcesurw.azureedge.net/js/cc55.js$script
 /ccnst/ccbundle.min.js
+||cc.mpa-web.de/public/app.js$script
 /iubenda_cs$domain=~radiomontecarlo.net|~video.repubblica.it|~video.lastampa.it|~nablawave.com|~buondi.it|~mediaset.it|~telerama.fr|~skuola.net
 /amp-user-notification-
 ||sn.sanoma.fi/js/sccm$script
@@ -23724,7 +23746,7 @@ trustarc.com$domain=avantiwestcoast.co.uk
 /c22cs.js$domain=cd.cz
 /cmp.$domain=o2.cz
 /stylecc$domain=immozentral.com
-privacy-center.org$domain=as.com|elconfidencial.com|diariodecadiz.es|lavozdegalicia.es|publico.es|diariodesevilla.es|eleconomista.es|granadahoy.com|malagahoy.es|diariodealmeria.es|lavozdeasturias.es|culturainquieta.com|segre.com|mappy.com|radioplayer.fr|goplay.be|lavoixdunord.fr|muyinteresante.es|t-mobile.pl|autocasion.com|europasur.es|pisos.com|lagacetadesalamanca.es|meilleure-innovation.com
+privacy-center.org$domain=as.com|elconfidencial.com|diariodecadiz.es|lavozdegalicia.es|publico.es|diariodesevilla.es|eleconomista.es|granadahoy.com|malagahoy.es|diariodealmeria.es|lavozdeasturias.es|culturainquieta.com|segre.com|mappy.com|radioplayer.fr|goplay.be|lavoixdunord.fr|muyinteresante.es|t-mobile.pl|autocasion.com|europasur.es|pisos.com|lagacetadesalamanca.es|meilleure-innovation.com|huelvainformacion.es
 /cookieConsent$domain=loesdau.de
 consent*$domain=t-mobile.cz
 /jquery.cookiekit.js$domain=dgeg.gov.pt

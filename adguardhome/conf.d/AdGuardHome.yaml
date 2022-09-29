@@ -117,7 +117,7 @@ filters:
     url: https://easylist-downloads.adblockplus.org/easyprivacy.txt
     name: EasyPrivacy
     id: 1662217245
-  - enabled: false
+  - enabled: true
     url: https://www.i-dont-care-about-cookies.eu/abp/
     name: I don’t care about cookies
     id: 1662217246
@@ -125,7 +125,7 @@ filters:
     url: https://anti-ad.net/adguard.txt
     name: anti-AD Filters
     id: 1662217247
-  - enabled: false
+  - enabled: true
     url: https://gist.githubusercontent.com/Ewpratten/a25ae63a7200c02c850fede2f32453cf/raw/b9318009399b99e822515d388b8458557d828c37/hosts-yt-ads
     name: YouTube-去广告
     id: 1662217248
@@ -133,6 +133,22 @@ filters:
     url: https://anti-ad.net/easylist.txt
     name: easylist.txt
     id: 1662225908
+  - enabled: true
+    url: https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts
+    name: 1024网站及澳门皇家赌场及恶意广告主机列表
+    id: 1662918853
+  - enabled: false
+    url: https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt
+    name: 乘风视频规则（周更），可过滤爱优腾三大视频网站的片头秒跳广告
+    id: 1662918854
+  - enabled: true
+    url: https://cdn1.tianli0.top/gh/zqzess/rule_for_quantumultX@master/Loon/Plugin/AdBlock.plugin
+    name: 圈X规则 zqzess/rule_for_quantumultX：常见国内app去广告
+    id: 1662918855
+  - enabled: false
+    url: https://raw.githubusercontent.com/v2ray/domain-list-community/master/data/google-ads
+    name: google ads
+    id: 1662918856
 whitelist_filters: []
 user_rules:
   - /googleads.$~script,domain=~googleads.github.io
@@ -140,7 +156,8 @@ user_rules:
   - '||google.com/pagead/'
   - '||static.doubleclick.net^$domain=youtube.com'
   - '||youtube.com/get_midroll_'
-  - ""
+  - '@@||www.paypalobjects.com^'
+  - '@@||draculatheme.com^'
 dhcp:
   enabled: false
   interface_name: ""
